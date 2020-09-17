@@ -1,17 +1,31 @@
 import React from 'react'
+import '../styles/header.scss'
 import {
     Box,
-   Flex,
-   Text
+    Text,
+    Flex
   } from 'rebass'
-export const Header = () => {
+const Header = props => {
     return (
-      <div className='header'>
-          <div className="title-agency">
-              <h1>Une agence qui raconte votre histoire</h1>
-          </div>
-      </div>
+        <Flex flexWrap='wrap' mx={0}>
+        <Box px={2} py={2} width={1/1}
+        sx=
+        {{
+            
+        background:'#000',
+        height:'100vh'
+    
+         }}
+        >
+ <div className="title">
+     <h1>Bouraine Lotfi</h1>
+ </div>
+        </Box>
+        </Flex>
     )
 }
 
+
+
 export default Header
+

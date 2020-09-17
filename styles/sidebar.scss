@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+body {
+  background: #fdfffc;
+   padding:0; 
+   margin:0;
+  }
+
+
+//   .sidebar {
+//       width: 40%;
+//       height: 100vh;
+//       background: #ef233c;
+//       -ms-flex: 0 100px;
+// -webkit-box-flex:  0;
+// -moz-box-flex:  0;
+// -ms-box-flex:  0;
+// box-flex:  0;  
+// position: fixed;
+
+//       h1{
+//         color: #fff;
+//         position: absolute;
+//         top: 73%;
+//         font-size: 90px;
+//         font-family: 'Hammersmith One', sans-serif;
+//         text-align: center;
+//         text-transform: uppercase;
+//         left: 6%;
+//       }
+
+
+      @media (max-width: 1536px){ 
+        h1{
+          color: #2b2d42;
+          position: absolute;
+          top: 3%;
+          font-size: 25px;
+          font-family: Poppins;
+          text-align: center;
+          text-transform: uppercase;
+          left: 3%;
+          z-index: 1;
+          font-weight: 300;
+          }
+
+          .desc {
+            position: absolute;
+            top: 86%;
+            font-size: 45px;
+            font-family: 'Hammersmith One', sans-serif;
+            text-align: center;
+            left: 6%;
+            color: #fff;
+            text-transform: uppercase;
+              }
+
+              .img-desc {
+                width: 70%;
+                z-index: 0;
+                margin-left: 10%;
+                margin-top: -18%;
+              }
+    
+
+      }
+  
+
+
+
+ .menu-trigger {
+  width: 50px;
+  height: 50px;
+  background:transparent;
+  position: fixed;
+  top: 50%;
+  left: 38%;
+  cursor: pointer;
+  span {
+    display: inline-flex;
+    width: 30px;
+    height: 4px;
+    // border-radius: 16px;
+    background: red;
+    transition:all ease 0.5S
+
+  }
+
+ }
+
+ .menu-close {
+  span {
+    position: absolute;
+    // background-color: turquoise;
+    &:nth-child(1) {
+  transform: rotate(45deg);
+    }
+    &:nth-child(3){
+      transform: rotate(-45deg);
+    }&:nth-child(2){
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+  }
+    }
+
+
+
+    button {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      appearance: none;
+      moz-appearance: none;
+      -webkit-appearance: none;
+    }
+    // -- CONTAINER -- //
+
+    
+    $animation-speed: 0.5s;
+    //$ease: cubic-bezier(0.4, 0.0, 0.2, 1); //material ease
+    
+    // -- MOBILE MENU -- //
+    .burger-menu {
+    
+      background-color: transparent;
+    position: fixed;
+    z-index: 3;
+    color: red;
+    left: 35.3%;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.5s;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    top: 6%;
+      &:hover{
+        .line-2 {
+        @extend .line-1;
+        margin: 10px 0;
+      }
+      }
+      .line-1 {
+        border-top: 3px solid #000;
+        display: block;
+        transition: margin $animation-speed, transform $animation-speed;
+        width: 25px;
+      }
+      
+      .line-2 {
+        @extend .line-1;
+        margin: 5px 0;
+      }
+      
+      .line-3 {
+        @extend .line-1;
+      }
+      
+      &.menu-close{;
+        transform: rotate(180deg);
+        
+        .line-1 {
+          transform: rotate(45deg);
+        }
+    
+        .line-2 {
+          margin: -3px 0;
+          opacity: 0;
+        }
+    
+        .line-3 {
+          transform: rotate(-45deg);
+        }
+    
+      }
+      
+    }
+
+    .sidebarnav {
+    position: fixed;
+    left: 40%;
+    width: 60%;
+    height: 100vh;
+    background:transparent;
+    z-index: 1;
+
+    nav {
+      position: absolute;
+      left: 28%;
+      top: 17%;
+    }
+
+     .menu-li {
+    list-style-type: none;
+    font-size: 100px;
+    padding: 0 10px 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color:#042a2b;
+      text-transform: uppercase;
+    }
+
+    }
+    @media screen and (max-width: 960px) {
+      .sidebarnav {
+        position: fixed;
+        left: 0%;
+        width: 60%;
+        height: 100vh;
+        background: #000;
+        z-index: 1;
+      }
+     
+}
+
+
+#curved1 {
+ 
+  font-size: 10px;
+  -webkit-text-stroke: 1px;
+  font-family: Poppins;
+  font-weight: 200;
+  
+  
+}
+
+
+
+
+.circular-text{
+  position: fixed;
+  top: 1.2%;
+  left: 36%;
+  font-size: -4px;
+  font-family: 'Asap', sans-serif;
+  font-weight: 400;
+  /* transform: translate(-50%,-50%); */
+  color: #ffffff;
+  z-index: 2;
+
+}
